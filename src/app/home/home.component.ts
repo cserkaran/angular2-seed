@@ -9,6 +9,15 @@ import { validateConfig } from '@angular/router/src/config';
 })
 export class HomeComponent {
   languages = ["English","Spanish","Other"];
-  model = new Employee('Karan','Sharma',true,'w2','English');
+  model = new Employee('','Sharma',true,'w2','default');
+  hasPrimaryLanguageError = false;
 
+  validatePrimaryLanguage(value){
+   if(value === 'default'){
+     this.hasPrimaryLanguageError = true;
+   }
+   else{
+     this.hasPrimaryLanguageError = false;
+   }
+  }
 }
