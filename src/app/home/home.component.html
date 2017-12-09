@@ -49,10 +49,11 @@
                 <option *ngFor="let lang of languages">{{ lang }}</option>
             </select>
         </div>
-        <!-- <div class="form-group">
+        <div class="form-group" style="display: inline-block;">
             <label>Date Hired</label>
-            <input type="date" class="form-control">
-        </div> -->
+            <datepicker name="startDate"  [showWeeks] = "false" [(ngModel)]="startDate"></datepicker>
+        </div>
+        {{ startDate }}
         <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Ok</button>
     </form>
 </div>

@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent {
   languages = [];
-  model = new Employee('','',false,'','default');
+  model = new Employee('','',false,'','default',new Date('Jan 1 2017'));
   hasPrimaryLanguageError = false;
 
   constructor(private formPoster : FormPoster){
